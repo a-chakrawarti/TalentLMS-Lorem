@@ -1,9 +1,9 @@
 import React from "react";
 
-const Paragraph = () => {
+const Paragraph = ({ item }) => {
   return (
     <>
-      <div>Paragraph</div>
+      <div className="para">{item}</div>
     </>
   );
 };

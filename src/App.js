@@ -27,16 +27,26 @@ function App() {
     setData(newTextData);
   };
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <label>Paragraphs</label>
-        <input type="number" value={count} onChange={handleChange} />
-        <button type="submit">GENERATE</button>
-      </form>
-      {data.map((item, index) => {
-        return <Paragraph key={index} item={item} />;
-      })}
-    </>
+    <main>
+      <div className="heading flex-center">
+        <h2>TIRED OF BORING LOREM IPSUM?</h2>
+      </div>
+
+      <div className="form flex-center">
+        <form onSubmit={handleSubmit}>
+          <label>Paragraphs:</label>
+          <input type="number" value={count} onChange={handleChange} />
+          <button className="btn" type="submit">
+            GENERATE
+          </button>
+        </form>
+      </div>
+      <div className="para-container">
+        {data.map((item, index) => {
+          return <Paragraph key={index} item={item} />;
+        })}
+      </div>
+    </main>
   );
 }
 
